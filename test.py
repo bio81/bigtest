@@ -4,15 +4,16 @@ print ('-------------------')
 print ('')
 ball=0 # Создаем переменную в которой будем хранить количество правильных ответов
 kol=0 # Создаем переменную в которой будем хранить количество вопросов
-f=open('d:/YandexDisk/Documents/Python/10 Экзамен/q.txt','r', encoding='utf-8') #открываем на чтение файл с вопросами
-while True:
-    vopros=f.readline().strip()
-    if (not vopros):
+f=open('d:/YandexDisk/Documents/Python/10 Экзамен/q.txt','r', encoding='utf-8')
+#открываем на чтение файл с вопросами
+while True:     #читаем файл построчно, пока есть вопросы:
+    vopros=f.readline().strip() # Здесь вопрос
+    if (not vopros):    # Если вопросов нет, то завершаем работу
         break
-    otvet1=f.readline().strip()
-    otvet2=f.readline().strip()
-    otvet3=f.readline().strip()
-    kod=f.readline().strip()
+    otvet1=f.readline().strip() # Здесь 1 вариант ответа
+    otvet2=f.readline().strip() # Здесь 2 вариант ответа
+    otvet3=f.readline().strip() # Здесь 3 вариант ответа
+    kod=f.readline().strip()    # Здесь указан номер правльного ответа
     print ('Вопрос ' +str(kol+1) + ': ' + str(vopros))
     print ('1.' + otvet1)
     print ('2.' + otvet2)
